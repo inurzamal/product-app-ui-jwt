@@ -8,13 +8,17 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    ProductListComponent
+    ProductListComponent,
+    NavBarComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

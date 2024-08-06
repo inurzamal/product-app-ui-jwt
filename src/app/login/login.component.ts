@@ -18,15 +18,15 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login() {
-    this.authService.login(this.loginData).subscribe(
-      response => {
+    this.authService.login(this.loginData).subscribe({
+      next: response => {
         localStorage.setItem('token', response);
         console.log('Login successful, token:', response);
         this.router.navigate(['/products']);
       },
-      error => {
-        console.error('Login failed', error);
+      error: err => {
+        console.error('Login failed', err);
       }
-    );
+    });
   }
 }
